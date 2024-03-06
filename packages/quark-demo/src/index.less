@@ -1,0 +1,123 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+// :host {
+//   display: block;
+//   margin: 0 auto;
+//   padding: 2rem;
+//   text-align: center;
+//   border: 2px solid #646cff;
+//   width: 500px;
+// }
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+
+  &:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+    transition: all 0.5s;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+
+  &:hover {
+    border-color: #646cff;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+.chart-table{
+  width: 100%;
+  overflow: auto;
+  &__text{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+  .row{
+    display: flex;
+
+    &:first-child{
+      border: none;
+      background-color: transparent;
+    }
+  }
+  .cell{
+    min-width: 10%;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    flex: 1;
+    // border-left: 1px solid #000;
+    &:first-child{
+      border: none;
+      background-color: transparent;
+      width: 30px;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+    &.head{
+      background-color: #F7F7F7;
+      margin:0;
+      padding-left:4px;
+      color: #262626;
+      font-weight: 600;
+    }
+    margin-left: 4px;
+    margin-top: 4px;
+  }
+  .cell0{
+    // min-width: 10%;
+    width: 30px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .noData{
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+  }
+}

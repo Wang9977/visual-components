@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test in Vue.js</title>
+    <style>
+      body {
+        margin: 0;
+        display: grid;
+      }
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <my-component :column="column" :data="data" :row="row"></my-component>
+    </div>
+
+    <p>Edit <code>src/index.tsx</code> and save to test HMR</p>
+  </body>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script type="module">
+    import "./src/index.tsx"
+
+    const { createApp } = Vue
+
+    createApp({
+      data() {
+        return {
+          column:["都市蓝领","都市家庭","都市中产","都市Z世代","小镇青年","小镇家庭","小镇中年","小镇中产","学生一族"],
+          coverage:[[430822,0,0,0,0,0,0,0,0,209],[0,165340,1032497,237447,61295,135549,1236621,130915,546629,457731]],
+          data:[[0.0971,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0373,0.2328,0.0535,0.0138,0.0306,0.2788,0.0295,0.1233,0.1032]],
+          row:["自用","他用"]
+        }
+      }
+    }).mount('#app')
+  </script>
+</html>
